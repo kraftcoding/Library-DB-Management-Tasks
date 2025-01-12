@@ -81,6 +81,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="WebAPI_Files_ToTest\LibraryManager_API_swagger.json" />
     <None Include="WebAPI_Files_ToTest\net7.0\appsettings.Development.json" />
     <None Include="WebAPI_Files_ToTest\net7.0\appsettings.json" />
     <None Include="WebAPI_Files_ToTest\net7.0\LibraryManager.API.deps.json" />
