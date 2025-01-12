@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D876E8E9-AA1D-4658-BAB9-870702F3B28F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LibraryDBManagement.Tasks</RootNamespace>
+    <AssemblyName>LibraryDBManagement.Tasks</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="WebAPI_Files_ToTest\net7.0\appsettings.Development.json" />
+    <None Include="WebAPI_Files_ToTest\net7.0\appsettings.json" />
+    <None Include="WebAPI_Files_ToTest\net7.0\LibraryManager.API.deps.json" />
+    <None Include="WebAPI_Files_ToTest\net7.0\LibraryManager.API.runtimeconfig.json" />
+    <None Include="WebAPI_Files_ToTest\net7.0\LibraryManager.API.staticwebassets.endpoints.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryDBManagement.Tasks.Core\LibraryDBManagement.Tasks.Core.csproj">
+      <Project>{F2CE451A-8A75-4B70-996E-4019557F8A69}</Project>
+      <Name>LibraryDBManagement.Tasks.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryDBManagement.Tasks.Model\LibraryDBManagement.Tasks.Model.csproj">
+      <Project>{00640805-B884-4368-86C7-9953889A06DC}</Project>
+      <Name>LibraryDBManagement.Tasks.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WebAPI_Files_ToTest\net7.0\Azure.Core.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Azure.Identity.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\FluentValidation.AspNetCore.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\FluentValidation.DependencyInjectionExtensions.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\FluentValidation.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Humanizer.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\LibraryManager.API.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\LibraryManager.API.exe" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\LibraryManager.API.pdb" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\LibraryManager.Application.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\LibraryManager.Application.pdb" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\LibraryManager.Core.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\LibraryManager.Core.pdb" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\LibraryManager.Infrastructure.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\LibraryManager.Infrastructure.pdb" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Mapster.Core.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Mapster.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.AspNetCore.Authentication.Certificate.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.AspNetCore.OpenApi.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.Data.SqlClient.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.EntityFrameworkCore.Design.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.EntityFrameworkCore.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.Extensions.DependencyModel.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.Identity.Client.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.IdentityModel.Protocols.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.OpenApi.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.SqlServer.Server.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Microsoft.Win32.SystemEvents.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Mono.TextTemplating.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Swashbuckle.AspNetCore.Swagger.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\System.CodeDom.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\System.Drawing.Common.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\System.Memory.Data.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\System.Runtime.Caching.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\System.Security.Cryptography.ProtectedData.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\System.Security.Permissions.dll" />
+    <Content Include="WebAPI_Files_ToTest\net7.0\System.Windows.Extensions.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>
