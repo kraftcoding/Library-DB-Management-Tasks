@@ -1,3 +1,3 @@
 # Library DB Management Tasks
 
-Visual Studio .NET 4.7 based console application executing task with configurable threads using queues and workers. In addition, it is included the Web API (.NET 7) that calls together with the DB Model.
+Library management task example built in .NET 4.7  executing configurable threads using queues and workers. In addition, it is included the Web API (.NET 7) that calls the task together with SQL project and console application for testings.
